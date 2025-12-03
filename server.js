@@ -83,11 +83,33 @@ app.get("/get-logs", (req, res) => {
 app.get("/clear-logs", (req, res) => {
     fs.writeFileSync(logFile, "");
     res.send(`
-        <h1>Logs Cleared ✔</h1>
-        <a href="/logs">Back to Logs</a><br>
-        <a href="/admin.html">Back to Admin</a>
+        <html>
+            <head>
+                <title>Logs Cleared</title>
+                <style>
+                    body {
+                        background-color: #ffccdd; /* same pink background */
+                        font-family: Arial, sans-serif;
+                        text-align: center;
+                        margin-top: 50px;
+                    }
+                    a {
+                        display: inline-block;
+                        margin-top: 15px;
+                        color: #333;
+                        font-weight: bold;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Logs Cleared ✔</h1>
+                <a href="/logs">Back to Logs</a><br>
+                <a href="/admin.html">Back to Admin</a>
+            </body>
+        </html>
     `);
 });
+
 
 app.listen(3000, () => {
     console.log("Server running on http://localhost:3000");
