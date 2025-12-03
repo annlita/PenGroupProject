@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Panel</title>
+    <title>Admin Dashboard</title>
     <style>
         body {
-            background: black;
-            color: white;
+            background: pink;
             text-align: center;
-            padding-top: 100px;
             font-family: Arial;
+            padding-top: 100px;
         }
         .box {
-            background: #222;
+            background: white;
             padding: 20px;
             width: 350px;
             margin: auto;
             border-radius: 15px;
-            box-shadow: 0 0 10px red;
+            box-shadow: 0 0 10px hotpink;
         }
-        a {
-            display: inline-block;
-            margin-top: 15px;
-            background: red;
-            padding: 10px 20px;
+        a.button {
+            display: block;
+            margin: 10px auto;
+            width: 200px;
+            background: hotpink;
             color: white;
+            padding: 12px;
             border-radius: 10px;
             text-decoration: none;
+        }
+        a.button:hover {
+            background: #ff1493;
         }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>Welcome Admin 🔥</h1>
-        <p>You have admin access.</p>
 
-        <a href="/index.html">Logout</a>
+    <div class="box">
+        <h1>👑 Welcome, Admin!</h1>
+        <p>You have special access.</p>
+
+        <a class="button" href="/logs">📜 View Failed Login Logs</a>
+        <a class="button" href="/index.html">⬅ Back to Login</a>
     </div>
+
 </body>
 </html>
